@@ -16,7 +16,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/16/2019
 ms.locfileid: "72424398"
 ---
-# <a name="tutorial-adding-formatting-options-to-a-power-bi-visual"></a>Tutorial: Adición de opciones de formato a un objeto visual de Power BI
+# <a name="tutorial-adding-formatting-options-to-a-power-bi-visual"></a>Tutorial: agregar opciones de formato a un Power BI visual
 
 En este tutorial aprenderá a agregar propiedades comunes al objeto visual.
 
@@ -121,15 +121,15 @@ Puede agregar propiedades personalizadas para permitir la configuración del col
 
 7. Abra el archivo **visual.ts**.
 
-8. En el archivo **visual. ts @ no__t-1,
+8. En el archivo **visual.ts**,
 
-    Import `VisualSettings` (clase)
+    importe la clase `VisualSettings`
 
     ```typescript
     import { VisualSettings } from "./settings";
     ```
 
-    y en la clase **Visual @ no__t-1 Agregue la siguiente propiedad:
+    y en la clase **Visual**, agregue la siguiente propiedad:
 
     ```typescript
     private visualSettings: VisualSettings;

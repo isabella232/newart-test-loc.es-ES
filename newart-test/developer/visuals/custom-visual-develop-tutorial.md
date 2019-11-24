@@ -16,9 +16,9 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/16/2019
 ms.locfileid: "72424483"
 ---
-# <a name="tutorial-developing-a-power-bi-visual"></a>Tutorial: Desarrollar un objeto visual de Power BI
+# <a name="tutorial-developing-a-power-bi-visual"></a>Tutorial: desarrollar un Power BI visual
 
-Permitimos que los desarrolladores agreguen fácilmente a Power BI objetos visuales de Power BI para usarlos en los paneles e informes. Para ayudarle a comenzar, hemos publicado en GitHub el código de todas nuestras visualizaciones.
+Permitimos que los desarrolladores agreguen fácilmente a Power BI objetos visuales de Power BI para usarlos en los paneles e informes. Para ayudarle a comenzar, publicamos en GitHub el código de todas nuestras visualizaciones.
 
 Junto con el marco de trabajo de visualización, incluimos nuestro conjunto de pruebas y herramientas para ayudar a la comunidad a crear objetos visuales de Power BI de alta calidad para Power BI.
 
@@ -89,7 +89,7 @@ Ahora tiene que instalar el paquete **pbiviz**.
 
 3. En el paso **Archivo para importar**, seleccione *Siguiente*.
 
-4. En el paso **Protección de clave privada**, en el cuadro de contraseña, pegue la frase de contraseña que ha recibido al crear el certificado.  De nuevo, en este caso es **_15105661266553327_** .
+4. En el paso **protección de clave privada** , en el cuadro contraseña, pegue la frase de contraseña que recibió al crear el certificado.  De nuevo, en este caso es **_15105661266553327_** .
 
       ![Copia de la frase de contraseña](media/custom-visual-develop-tutorial/cert-install-wizard-show-passphrase.png)
 
@@ -313,7 +313,7 @@ Ahora puede desarrollar el objeto visual personalizado para mostrar un círculo 
 
     Este comando instala las definiciones de TypeScript basadas en archivos JavaScript, lo que le permite desarrollar el objeto visual personalizado en TypeScript (que es un superconjunto de JavaScript). Visual Studio Code es el entorno de desarrollo integrado perfecto para desarrollar aplicaciones de TypeScript.
 
-3. Para instalar el **core-JS @ no__t-1 en PowerShell, escriba el siguiente comando.
+3. Para instalar **core-js** en PowerShell, escriba el siguiente comando.
 
     ```powershell
     npm i core-js@3.2.1 --save
@@ -338,9 +338,9 @@ Ahora puede desarrollar el objeto visual personalizado para mostrar un círculo 
     PS C:\circlecard>
     ```
 
-    Este comando instala la biblioteca estándar modular para JavaScript. Incluye polyfill para ECMAScript hasta 2019. Más información acerca de [`core-js`](https://www.npmjs.com/package/core-js)
+    Este comando instala la biblioteca estándar modular de JavaScript. Incluye polyfill para ECMAScript hasta 2019. En [`core-js`](https://www.npmjs.com/package/core-js) encontrará más información al respecto.
 
-4. Para instalar el **powerbi-visual-API @ no__t-1 en PowerShell, escriba el siguiente comando.
+4. Para instalar **powerbi-visual-api** en PowerShell, escriba el siguiente comando.
 
     ```powershell
     npm i powerbi-visuals-api --save-dev
@@ -356,7 +356,7 @@ Ahora puede desarrollar el objeto visual personalizado para mostrar un círculo 
     PS C:\circlecard>
     ```
 
-    Este comando instala Power BI definiciones de API de objetos visuales.
+    Este comando instala definiciones de API de objetos visuales de Power BI.
 
 5. Inicie [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -370,7 +370,7 @@ Ahora puede desarrollar el objeto visual personalizado para mostrar un círculo 
 
     ![Biblioteca D3 en Visual Studio Code](media/custom-visual-develop-tutorial/d3-library.png)
 
-7. Asegúrese de que se ha agregado el archivo **index. d. ts @ no__t-1; para ello, expanda node_modules > @types > D3 en el panel **Explorer @ no__t-4.
+7. Expanda node_modules >  **> d3 en el** panel Explorador@types y asegúrese de que el archivo **index.d.ts** se ha agregado.
 
     ![Archivo index.d.ts](media/custom-visual-develop-tutorial/index-d-ts.png)
 
@@ -531,7 +531,7 @@ Ahora podemos explorar cómo desarrollar el objeto visual personalizado para mos
 
 6. Continúe ejecutando el objeto visual.
 
-## <a name="process-data-in-the-visual-code"></a>Procesar datos en el código Visual
+## <a name="process-data-in-the-visual-code"></a>Procesar datos en el código del elemento visual
 
 Defina los roles de datos y las asignaciones de vista de datos, y después modifique la lógica del objeto visual personalizado para mostrar el valor y el nombre para mostrar de una medida.
 
@@ -597,17 +597,17 @@ Modifique el archivo **capabilities.json** para definir el rol de datos y las as
 
     ![Activación de la alternancia](media/custom-visual-develop-tutorial/show-dataview-toolbar-revert.png)
 
-### <a name="consume-data-in-the-visual-code"></a>Consumir datos en el código Visual
+### <a name="consume-data-in-the-visual-code"></a>Consumir datos en el código del elemento visual
 
-1. En **Visual Studio Code @ no__t-1, en el archivo **visual. ts @ no__t-3,
+1. En **Visual Studio Code**, en el archivo **visual.ts**,
 
-    importar la interfaz `DataView` desde el módulo `powerbi`
+    importe la interfaz `DataView` desde el módulo `powerbi`
 
     ```typescript
     import DataView = powerbi.DataView;
     ```
 
-    y agregue la siguiente instrucción como la primera instrucción del método Update.
+    y agregue la siguiente instrucción como la primera instrucción del método update.
 
     ```typescript
     let dataView: DataView = options.dataViews[0];
